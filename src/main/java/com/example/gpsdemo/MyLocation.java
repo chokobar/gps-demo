@@ -4,7 +4,9 @@ import java.net.http.*;
 import java.net.URI;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class MyLocation {
     public static void main(String[] args) throws Exception {
         HttpClient client = HttpClient.newHttpClient();
@@ -22,9 +24,11 @@ public class MyLocation {
         String city = json.get("city").asText();
         String country = json.get("country").asText();
 
-        System.out.println("현재 대략적 위치:");
-        System.out.println("위도: " + lat);
-        System.out.println("경도: " + lon);
-        System.out.println("도시: " + city + ", 국가: " + country);
+
+
+        log.info("현재 대략적 위치 : ");
+        log.info("위도 : " + lat);
+        log.info("경도 : " + lon);
+        log.info("도시 : " + city +  ", 국가: " + country);
     }
 }

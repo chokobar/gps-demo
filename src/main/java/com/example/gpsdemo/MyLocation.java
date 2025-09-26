@@ -24,8 +24,6 @@ public class MyLocation {
         String city = json.get("city").asText();
         String country = json.get("country").asText();
 
-
-
         log.info("현재 대략적 위치 : ");
         log.info("위도 : " + lat);
         log.info("경도 : " + lon);

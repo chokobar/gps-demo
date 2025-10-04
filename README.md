@@ -19,3 +19,11 @@ ip-api.com의 무료 엔드포인트를 호출해 위경도/도시/국가를 얻
 - 조회 결과(위도/경도/도시/국가) 모델 바인딩 → Thymeleaf 템플릿 렌더링
 - Leaflet로 지도/마커 표시 (도시명/국가명 팝업)
 - API 실패/도시명 없음 시 안전한 Fallback (서울 좌표/“My Location”)
+
+
+## 🔍 학습 포인트
+- 외부 REST API 호출: HttpClient와 ObjectMapper를 사용해 JSON 응답 파싱
+- 예외 처리: API 응답 실패 시 안전한 폴백(Fallback) 처리 방법
+- Spring MVC + Thymeleaf 연동: 컨트롤러에서 모델 데이터를 템플릿으로 전달
+- Leaflet 라이브러리 활용: OpenStreetMap 기반 지도 표시 및 마커/팝업 추가
+- IP 기반 위치 조회의 한계: 실제 GPS가 아닌 대략적인 공용 IP 기반 위치임을 이해

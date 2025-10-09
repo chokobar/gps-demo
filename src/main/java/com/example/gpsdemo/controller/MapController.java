@@ -16,13 +16,23 @@ public class MapController {
     public String showMap(Model model) throws Exception {
         IpLocationService.Location loc = ipLocationService.getMyIpLocation();
 
+        String label;
+
+        if (loc.getCity() == null || loc.getCity().isBlank()) {
+            if (loc.getCountry() == null) {
+                label = "My Location";
+            } else {
+                label = loc.getCountry();
+            }
+        } else {
+            label = loc.getCity() + ", " + loc.getCountry();
+        }
+
         model.addAttribute("lat", loc.getLat());
         model.addAttribute("lon", loc.getLon());
-        model.addAttribute("label",
-                (loc.getCity() == null || loc.getCity().isBlank())
-                        ? (loc.getCountry() == null ? "My Location" : loc.getCountry())
-                        : loc.getCity() + ", " + loc.getCountry());
+        model.addAttribute("label", label);
 
         return "map";
     }
+
 }

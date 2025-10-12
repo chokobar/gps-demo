@@ -1,0 +1,12 @@
+████████████████████████████████████████████████████
+█░░░░░░░░░░░░░░░░░░░░░ GPS-Demo ░░░░░░░░░░░░░░░░░░░█
+████████████████████████████████████████████████████
+█                                                  █
+█             Welcome to GPS Demo                  █
+█                                                  █
+█  Spring Boot Version: ${spring-boot.version}                      █
+█  Java Version       : ${java.version}                    █
+█  OS                 : ${os.name} (${os.version})          █
+█                                                  █
+█                         Developed by: chokobar   █
+████████████████████████████████████████████████████
